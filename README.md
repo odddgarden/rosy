@@ -1,4 +1,4 @@
-<p align="center">![rosy landing](https://github.com/odddgarden/rosy/assets/170409803/4a3b7dd3-33f0-4e4a-95a3-6ddea445addd)</p>
+<p align="center"><img src="https://github.com/odddgarden/rosy/assets/170409803/4a3b7dd3-33f0-4e4a-95a3-6ddea445addd"/></p>
 
 
 
