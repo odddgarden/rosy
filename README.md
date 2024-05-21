@@ -25,6 +25,4 @@ Rosy serves as a solution to this problem by offering a user-friendly web platfo
 2. Building a CI/CD Pipeline with AWS:
    We're in the process of setting up a CI/CD pipeline using AWS services such as AWS CodeDeploy, CodePipeline, RDS, IAM, and S3. This pipeline will streamline our development and deployment process, allowing us     to deliver updates and new features to our users more efficiently.
 
-Stay tuned for updates as we continue to make Rosy an even better platform for screenwriters worldwide!
-
 
