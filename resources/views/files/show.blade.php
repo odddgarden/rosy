@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <title>Rosy</title>
     <style>
     body {
@@ -63,6 +66,7 @@
         }
 
         .bottom {
+            margin-top: -12px;
             color: #027BB7;
         }
     }
@@ -84,6 +88,23 @@
     .pdf::-webkit-scrollbar {
         display: none;
     }
+
+    .written {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        p {
+            margin-right: 8px;
+        }
+
+        .name:hover {
+            color: #027BB7;
+
+        }
+    }
+
+
     </style>
 </head>
 <body>
@@ -107,7 +128,15 @@
         <div class="text">
             <div class="top">
                 <h1 class="dynamic-font-size">{{$file->title}}</h1>
-                <p>Written By: {{ $file->user->first_name }} {{ $file->user->last_name }}</p>
+                <div class="written">
+                    <p>Written By: </p>
+                    <a href="{{ route('users.show', $file->user->id) }}">
+                        <div class="name">
+                        {{ $file->user->first_name }} {{ $file->user->last_name }}
+                        </div>
+                    </a>
+                </div>
+                
             </div>
             <div class="mid">
                 <p>{{ $file->synopsis }}</p>

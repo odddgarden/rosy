@@ -29,14 +29,18 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $first = $request->first_name;
-        $user = User::where('first_name', $first)->first();
-        
-        if (! isset($user)) {
+        $name = $request->input('name');
+        $name = strtolower($name);
+        $users = User::whereRaw('LOWER(first_name) LIKE ? OR LOWER(last_name) LIKE ? OR CONCAT(LOWER(first_name), " ", LOWER(last_name)) LIKE ?', ["{$name}%", "{$name}%", "{$name}%"])
+                ->orderBy('first_name', 'asc')
+                ->orderBy('last_name', 'asc')
+                ->get();        
+                
+        if (! isset($users)) {
             return 'No results';
         };
 
-        return view('users.index', compact('user'));
+        return view('users.index', compact('users'));
     }
 
     /**

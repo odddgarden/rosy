@@ -115,7 +115,7 @@
             </div>
             <form action="{{ route('users.store') }}" method="POST">
                 @csrf
-                <input type="text" name="first_name" id="first_name" placeholder="Search here...">
+                <input type="text" name="name" id="name" placeholder="Search here...">
             </form>
         </div>
         
