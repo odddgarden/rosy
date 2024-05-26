@@ -104,6 +104,10 @@
         }
     }
 
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
 
     </style>
 </head>
